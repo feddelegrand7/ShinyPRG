@@ -1,4 +1,4 @@
-
+library()
 
 library(shiny)
 
@@ -37,7 +37,9 @@ ui <- fluidPage(
             
             title = "Anom", 
             
-            titlePanel("Anomalie Detection")
+            titlePanel("Anomalie Detection"), 
+            
+            
             
             
             
@@ -66,7 +68,10 @@ server <- shinyServer(function(input, output, session) {
         head(data())
     })
     
-
+    
+    
+    
+    
 })
 
 shinyApp(ui = ui, server = server)
